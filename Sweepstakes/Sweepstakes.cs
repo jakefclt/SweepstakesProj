@@ -8,15 +8,11 @@ namespace Sweepstakes
 {
     class Sweepstakes
     {
-        //member variable (Has A)
+        
         Dictionary<int, Contestant> contestants;
         Sweepstakes sweepstakes;
-        //constructor (Is A)
-       
-            
-        
-
-        //member method(Can Do)
+      
+                                  
     }  
     public void RegisterContestant(Contestant contestant)
     {

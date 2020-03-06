@@ -10,27 +10,34 @@ namespace Sweepstakes
     {
         
 
-        static void AddFirstName(Contestant contestant)
+        public static void PromptFirstName()
         {            
             Console.WriteLine("Enter first name");
-            contestant.firstName = Console.ReadLine();
+            
         }
 
-        static void AddLastName(Contestant contestant)
+        public static void PromptLastName()
         {
             Console.WriteLine("Enter last name");
-            contestant.lastName = Console.ReadLine();
+            
         }
-        static void AddEmail(Contestant contestant)
+        public static void PromptEmail()
         {
             Console.WriteLine("Enter email");
-            contestant.emailAddress = Console.ReadLine();
+            
         }
-        static void AddRegistration(Contestant contestant)
+        public static void PromptRegistration()
         {
             Console.WriteLine("Enter registration number");
-            contestant.registrationNumber = int.Parse(Console.ReadLine());
-        }        
+            
+        } 
+        public static string GetUserInput()
+        {
+             string userInput;
+             userInput = Console.ReadLine();
+             return userInput;
+
+        }
 
     }
 }

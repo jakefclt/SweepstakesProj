@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class Sweepstakes
+   class Sweepstakes
     {
 
         Dictionary<int, Contestant> contestants;
         string name;
+        int registrationCount = 1;
         public string Name { get; }
    
         public Sweepstakes(string name)
@@ -19,13 +20,19 @@ namespace Sweepstakes
         }
         public void RegisterContestant(Contestant contestant)
         {
-            contestants.Add(contestant.registrationNumber, contestant);
+           
+            contestants.Add(registrationCount, contestant);
+            registrationCount++;
         }
         public Contestant PickWinner()
         {
+            Contestant winner;
+            int winningNumber;
             Random random = new Random();
-            random.Next();
-            //return a random number from dictionary
+            winningNumber= random.Next(1, registrationCount);
+            winner = contestants[winningNumber];
+            return winner;
+            
         }
         public void PrintContestantInfo(Contestant contestant)
         {

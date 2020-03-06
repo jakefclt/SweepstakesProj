@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class Sweepstakes_StackManager : ISweepstakesManager
+    class SweepstakesStackManager : ISweepstakesManager
     {
         Stack<Sweepstakes> stack;
-        public Sweepstakes_StackManager()
+        public SweepstakesStackManager()
         {
             stack = new Stack<Sweepstakes>();
         }

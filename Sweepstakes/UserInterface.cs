@@ -30,12 +30,13 @@ namespace Sweepstakes
         {
             Console.WriteLine("Enter registration number");
             
-        } 
+        }
         public static string GetUserInput()
         {
-             string userInput;
-             userInput = Console.ReadLine();
-             return userInput;
+          
+            string userInput;
+            userInput = Console.ReadLine();
+            return userInput;
 
         }
 

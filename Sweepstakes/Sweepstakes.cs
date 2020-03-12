@@ -12,19 +12,21 @@ namespace Sweepstakes
         Dictionary<int, Contestant> contestants;
         string name;
         int registrationCount = 1;
+        //name property
         public string Name { get; }
-   
-        public Sweepstakes(string name)
+        //Constructor
+       public Sweepstakes(string name)
         {
             this.name = name;
         }
-        public void RegisterContestant(Contestant contestant)
+        //member method(Can Do)
+         void RegisterContestant(Contestant contestant)
         {
            
             contestants.Add(registrationCount, contestant);
             registrationCount++;
         }
-        public Contestant PickWinner()
+         Contestant PickWinner()
         {
             Contestant winner;
             int winningNumber;
@@ -34,7 +36,7 @@ namespace Sweepstakes
             return winner;
             
         }
-        public void PrintContestantInfo(Contestant contestant)
+         void PrintContestantInfo(Contestant contestant)
         {
             Console.WriteLine(contestant.firstName);
             Console.WriteLine(contestant.lastName);
